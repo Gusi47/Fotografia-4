@@ -1,0 +1,23 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.galeria {
+
+    &__heading {
+        @include m.heading;
+    }    
+
+    &__imagenes {
+        @include m.flex(flex, column, space-between, center);
+        
+
+    }
+
+    &__fotos {
+        min-width: 60%;
+        cursor: pointer;
+        height: auto;
+        margin-bottom: 0.3rem;
+    }
+}

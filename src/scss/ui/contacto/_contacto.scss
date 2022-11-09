@@ -1,0 +1,55 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+
+.formulario {
+        
+    &__grid {
+        
+        @include m.flex(flex, column, center, center);
+       
+    }
+
+    &__field {
+        text-align: center;
+        width: 70%;
+      border: none;
+    }
+
+    legend {
+        font-size: 1.5rem; 
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 1rem 1rem;
+       
+    }
+
+    label {
+        font-size: 1.3rem;
+         
+    }
+
+    &__campos {
+        padding: 0.5rem 0;
+        width: 100%;
+        
+        
+    }
+
+    &__imput {
+        padding: .5rem 2rem .5rem 0;
+        font-size: 1.3rem;
+        width: 100%;
+        backdrop-filter: blur(10px);
+        background-color: transparent;
+        // border: none;
+    } 
+
+    &__submitb {
+
+        @include m.boton(v.$red, v.$negro);
+        color: v.$blanco;
+        border-radius: .5rem;
+    }
+}
